@@ -1,0 +1,1 @@
+You should copy this folder path, present above [This PC > ...] and paste it in SnapEnv.bat then, it will run correctly. Else you can also main.py.

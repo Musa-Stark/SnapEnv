@@ -1,0 +1,41 @@
+[
+  {
+    "name": "end to end test",
+    "steps": [
+      {
+        "type": "new-desktop"
+      },
+      {
+        "type": "vscode",
+        "folder": "/a/b/c"
+      },
+      {
+        "type": "new-desktop"
+      },
+      {
+        "type": "browser",
+        "window": [
+          {
+            "url": "chatgpt.com/?temporary-chat=true"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Starting youtube",
+    "steps": [
+      {
+        "type": "new-desktop"
+      },
+      {
+        "type": "browser",
+        "window": [
+          {
+            "url": "youtube.com"
+          }
+        ]
+      }
+    ]
+  }
+]
