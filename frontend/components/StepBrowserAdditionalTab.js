@@ -22,7 +22,7 @@ export default function StepBrowserAdditionalTab({ onSubmit, onBack }) {
   if (showUrlInput) {
     return (
       <div className="step-container">
-        <h2 className="step-title">ADD ANOTHER TAB - ENTER URL 'a'</h2>
+        <h2 className="step-title">ADD ANOTHER TAB - ENTER URL</h2>
         
         <div className="form-group">
           <label htmlFor="tab-url" className="form-label">

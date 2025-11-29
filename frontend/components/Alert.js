@@ -23,7 +23,7 @@ export default function AlertBox({
   }, [duration]);
 
   return (
-    <div className="w-fit max-w-[90%] absolute bottom-6 right-6 z-50">
+    <div className="w-fit max-w-[90%] fixed bottom-6 right-6 z-50">
       <Alert
         className={`
           flex

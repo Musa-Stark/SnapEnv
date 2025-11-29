@@ -54,7 +54,7 @@ def find_env(user_input):
         for idx, item in enumerate(data):
             if idx == int(user_input) - 1:
                 start_setup(item)
-    elif re.fullmatch(r"[A-Z]?[a-z0-9]+(?:\s[A-Z]?[a-z0-9]+)*", user_input):
+    else:
         target = user_input.split(" ")
         for item in data:
             if len(target) == 1:
@@ -66,15 +66,15 @@ def find_env(user_input):
                     if i.lower() in item["name"].lower().split():
                         start_setup(item)
                         break
-                break
 
 
+last_env = get_last_env()
 if __name__ == "__main__":
     try:
         if len(data) == 0:
             print("No tasks found!")
         else:
-            print("Select one within 60 seconds")
+            print(f"Select one within 60 seconds or I setup {last_env}")
             for idx, item in enumerate(data):
                 print(f"{idx+1}. {item['name']}")
             user_input = inputimeout(
@@ -84,7 +84,6 @@ if __name__ == "__main__":
             find_env(user_input)
 
     except TimeoutOccurred:
-        last_env = get_last_env()
         if not last_env:
             print("No last environment found.")
         else:
