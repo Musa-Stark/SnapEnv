@@ -1,13 +1,39 @@
 [
   {
-    "name": "end to end test",
+    "name": "Jarvis",
     "steps": [
       {
         "type": "new-desktop"
       },
       {
         "type": "vscode",
-        "folder": "/a/b/c"
+        "folder": "E:\\code_playground\\Jarvis\\jarvis_v1"
+      },
+      {
+        "type": "new-desktop"
+      },
+      {
+        "type": "browser",
+        "window": [
+          {
+            "url": "chatgpt.com/?temporary-chat=true"
+          },
+          {
+            "url": "localhost:3000"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Python - Websockets",
+    "steps": [
+      {
+        "type": "new-desktop"
+      },
+      {
+        "type": "vscode",
+        "folder": "E:\\code_playground\\python\\websockets"
       },
       {
         "type": "new-desktop"
@@ -23,8 +49,15 @@
     ]
   },
   {
-    "name": "Starting youtube",
+    "name": "C++",
     "steps": [
+      {
+        "type": "new-desktop"
+      },
+      {
+        "type": "vscode",
+        "folder": "E:\\code_playground\\cpp"
+      },
       {
         "type": "new-desktop"
       },
@@ -32,7 +65,7 @@
         "type": "browser",
         "window": [
           {
-            "url": "youtube.com"
+            "url": "chatgpt.com/?temporary-chat=true"
           }
         ]
       }
