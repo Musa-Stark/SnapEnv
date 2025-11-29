@@ -5,7 +5,6 @@ import re
 import pyautogui
 import time
 import subprocess
-import webbrowser
 
 last_env_file = Path(__file__).parent / "last_env.txt"
 json_file = Path(__file__).parent.parent / "config" / "environments.json"
@@ -28,27 +27,26 @@ def get_last_env():
 
 
 def start_setup(item):
-    # save_last_env(item["name"])
-    # for _ in range(10):
-    #     pyautogui.hotkey("ctrl", "win", "left")
-    #     time.sleep(0.1)
+    save_last_env(item["name"])
+    for _ in range(10):
+        pyautogui.hotkey("ctrl", "win", "left")
+        time.sleep(0.1)
 
-    # print("Starting setup...")
-    # time.sleep(2)
+    print("Starting setup...")
+    time.sleep(2)
 
     steps = item["steps"]
     for i in steps:
-        # if i["type"] == "new-desktop":
-        #     pyautogui.hotkey("ctrl", "win", "right")
-        #     time.sleep(1)
-        # elif i["type"] == "vscode":
-        #     subprocess.run(["code", i["folder"]], shell=True)
-        #     time.sleep(2)
+        if i["type"] == "new-desktop":
+            pyautogui.hotkey("ctrl", "win", "right")
+            time.sleep(1)
+        elif i["type"] == "vscode":
+            subprocess.run(["code", i["folder"]], shell=True)
+            time.sleep(2)
         if i["type"] == "browser":
             urls = [j["url"] for j in i["window"]]
-            print(urls)
             subprocess.run(["cmd", "/c", "start", "chrome", *urls])
-            # time.sleep(4)
+            time.sleep(4)
 
 
 def find_env(user_input):
