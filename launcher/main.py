@@ -80,7 +80,7 @@ if __name__ == "__main__":
                 print(f"{idx+1}. {item['name']}")
             user_input = inputimeout(
                 prompt="> ",
-                timeout=2,
+                timeout=60,
             )
             find_env(user_input)
 
