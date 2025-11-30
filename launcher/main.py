@@ -27,6 +27,7 @@ def get_last_env():
 
 
 def start_setup(item):
+    print(item)
     save_last_env(item["name"])
     for _ in range(10):
         pyautogui.hotkey("ctrl", "win", "left")
@@ -55,15 +56,15 @@ def find_env(user_input):
             if idx == int(user_input) - 1:
                 start_setup(item)
     else:
-        target = user_input.split(" ")
+        target = user_input.lower().split(" ")
         for item in data:
             if len(target) == 1:
-                if target[0] in item["name"].lower().split():
+                if target == item["name"].lower().split():
                     start_setup(item)
                     break
             else:
                 for i in target:
-                    if i.lower() in item["name"].lower().split():
+                    if i in item["name"].lower().split():
                         start_setup(item)
                         break
 
@@ -79,7 +80,7 @@ if __name__ == "__main__":
                 print(f"{idx+1}. {item['name']}")
             user_input = inputimeout(
                 prompt="> ",
-                timeout=60,
+                timeout=2,
             )
             find_env(user_input)
 
