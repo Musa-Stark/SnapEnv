@@ -27,7 +27,6 @@ def get_last_env():
 
 
 def start_setup(item):
-    print(item)
     save_last_env(item["name"])
     for _ in range(10):
         pyautogui.hotkey("ctrl", "win", "left")
