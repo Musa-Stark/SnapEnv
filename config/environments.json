@@ -70,5 +70,31 @@
         ]
       }
     ]
+  },
+  {
+    "name": "Selenium",
+    "steps": [
+      {
+        "type": "new-desktop"
+      },
+      {
+        "type": "vscode",
+        "folder": "E:\\code_playground\\python\\Selinum"
+      },
+      {
+        "type": "new-desktop"
+      },
+      {
+        "type": "browser",
+        "window": [
+          {
+            "url": "chatgpt.com/?temporary-chat=true"
+          },
+          {
+            "url": "https://chatgpt.com/c/6938ef4c-cafc-8326-bafa-42f8ac0a07b0"
+          }
+        ]
+      }
+    ]
   }
 ]
