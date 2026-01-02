@@ -6,7 +6,7 @@ import pyautogui
 import time
 import subprocess
 
-last_env_file = Path(__file__).parent / "last_env.txt"
+last_env_file = Path(__file__).parent / "last_env.json"
 json_file = Path(__file__).parent.parent / "config" / "environments.json"
 
 with open(json_file, "r") as file:
@@ -18,12 +18,14 @@ with open(json_file, "r") as file:
 
 def save_last_env(env):
     with open(last_env_file, "w") as file:
-        file.write(env)
+        json.dump({"env": env}, file, indent=4)
 
 
 def get_last_env():
     with open(last_env_file, "r") as file:
-        return file.read()
+        data = json.load(file)
+        name = data.get("env", "")
+        return name
 
 
 def start_setup(item):
@@ -37,35 +39,39 @@ def start_setup(item):
 
     steps = item["steps"]
     for i in steps:
-        if i["type"] == "new-desktop":
-            pyautogui.hotkey("ctrl", "win", "right")
-            time.sleep(1)
-        elif i["type"] == "vscode":
-            subprocess.run(["code", i["folder"]], shell=True)
+        if i["type"] == "desktop":
+            pyautogui.hotkey("ctrl", "win", i["direction"].lower())
             time.sleep(2)
+        elif i["type"] == "editor":
+            subprocess.run([i["IDE"], i["folder"]], shell=True)
+            time.sleep(8)
         if i["type"] == "browser":
             urls = [j["url"] for j in i["window"]]
             subprocess.run(["cmd", "/c", "start", "chrome", *urls])
-            time.sleep(4)
+            time.sleep(5)
 
 
 def find_env(user_input):
-    if re.fullmatch(r"[0-9]", str(user_input)):
+    # if index (1 or 2 or 3...)
+    if re.fullmatch(r"\d+", str(user_input)):
         for idx, item in enumerate(data):
             if idx == int(user_input) - 1:
                 start_setup(item)
+
+    # if name
     else:
-        target = user_input.lower().split(" ")
+        target = "".join(user_input.lower().split())
+        found = False
+
         for item in data:
-            if len(target) == 1:
-                if target == item["name"].lower().split():
-                    start_setup(item)
-                    break
-            else:
-                for i in target:
-                    if i in item["name"].lower().split():
-                        start_setup(item)
-                        break
+            item_join_name = "".join(item.get("name", "").lower().split())
+            if target == item_join_name:
+                found = True
+                start_setup(item)
+                break
+        
+        if not found:
+            print("Invalid Input!!!")
 
 
 last_env = get_last_env()

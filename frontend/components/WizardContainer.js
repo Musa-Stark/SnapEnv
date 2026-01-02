@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import StepSelectAction from "./StepSelectAction";
-import StepVSCodePath from "./StepVSCodePath";
+import StepEditorPath from "./StepEditorPath";
 import StepBrowserUrl from "./StepBrowserUrl";
 import StepBrowserAdditionalTab from "./StepBrowserAdditionalTab";
+import DesktopDirection from "./DesktopDirection";
 import Summary from "./Summary";
 import AlertBox from "./Alert";
 
@@ -46,7 +47,7 @@ export default function WizardContainer() {
     }
 
     if (action === "new-desktop") {
-      setSteps([...steps, { type: "new-desktop" }]);
+       navigateForward("desktop-direction");
       return;
     }
 
@@ -62,9 +63,16 @@ export default function WizardContainer() {
     }
   };
 
-  const handleVSCodePath = (folderPath) => {
-    if (folderPath) {
-      setSteps([...steps, { type: "vscode", folder: folderPath }]);
+  const handleDesktopDirection = (direction) => {
+    if (direction) {
+      setSteps([...steps, { type: "desktop", direction }]);
+    }
+    navigateBackward("select-action");
+  };
+
+  const handleEditorPath = (folderPath, IDE) => {
+    if (folderPath && IDE) {
+      setSteps([...steps, { type: "editor", folder: folderPath, IDE }]);
     }
     navigateBackward("select-action");
   };
@@ -120,7 +128,7 @@ export default function WizardContainer() {
     <div className="wizard-container">
       {success !== null && <AlertBox success={success} message={message} />}
       <div className="wizard-header">
-        <h1 className="wizard-title">AUTOMATION SETUP WIZARD</h1>
+        <h1 className="wizard-title">SnapEnv</h1>
         <div className="glow-line"></div>
       </div>
 
@@ -142,8 +150,15 @@ export default function WizardContainer() {
         )}
 
         {currentView === "vscode-path" && (
-          <StepVSCodePath
-            onSubmit={handleVSCodePath}
+          <StepEditorPath
+            onSubmit={handleEditorPath}
+            onCancel={handleBackToSelect}
+          />
+        )}
+
+        {currentView === "desktop-direction" && (
+          <DesktopDirection
+            onSubmit={handleDesktopDirection}
             onCancel={handleBackToSelect}
           />
         )}

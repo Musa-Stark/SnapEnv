@@ -3,14 +3,17 @@
     "name": "Jarvis",
     "steps": [
       {
-        "type": "new-desktop"
+        "type": "desktop",
+        "direction": "right"
       },
       {
-        "type": "vscode",
+        "type": "editor",
+        "IDE": "Antigravity",
         "folder": "E:\\code_playground\\Jarvis\\jarvis_v1"
       },
       {
-        "type": "new-desktop"
+        "type": "desktop",
+        "direction": "right"
       },
       {
         "type": "browser",
@@ -22,6 +25,10 @@
             "url": "chatgpt.com/?temporary-chat=true"
           }
         ]
+      },
+      {
+        "type": "desktop",
+        "direction": "left"
       }
     ]
   },
@@ -29,14 +36,17 @@
     "name": "Python - Websockets",
     "steps": [
       {
-        "type": "new-desktop"
+        "type": "desktop",
+        "direction": "right"
       },
       {
-        "type": "vscode",
+        "type": "editor",
+        "IDE": "Antigravity",
         "folder": "E:\\code_playground\\python\\websockets"
       },
       {
-        "type": "new-desktop"
+        "type": "desktop",
+        "direction": "right"
       },
       {
         "type": "browser",
@@ -45,6 +55,10 @@
             "url": "chatgpt.com/?temporary-chat=true"
           }
         ]
+      },
+      {
+        "type": "desktop",
+        "direction": "left"
       }
     ]
   },
@@ -52,14 +66,17 @@
     "name": "C++",
     "steps": [
       {
-        "type": "new-desktop"
+        "type": "desktop",
+        "direction": "right"
       },
       {
-        "type": "vscode",
+        "type": "editor",
+        "IDE": "Antigravity",
         "folder": "E:\\code_playground\\cpp"
       },
       {
-        "type": "new-desktop"
+        "type": "desktop",
+        "direction": "right"
       },
       {
         "type": "browser",
@@ -68,6 +85,10 @@
             "url": "chatgpt.com/?temporary-chat=true"
           }
         ]
+      },
+      {
+        "type": "desktop",
+        "direction": "left"
       }
     ]
   },
@@ -75,14 +96,17 @@
     "name": "Selenium",
     "steps": [
       {
-        "type": "new-desktop"
+        "type": "desktop",
+        "direction": "right"
       },
       {
-        "type": "vscode",
+        "type": "editor",
+        "IDE": "Antigravity",
         "folder": "E:\\code_playground\\python\\Selinum"
       },
       {
-        "type": "new-desktop"
+        "type": "desktop",
+        "direction": "right"
       },
       {
         "type": "browser",
@@ -94,6 +118,216 @@
             "url": "https://chatgpt.com/c/6938ef4c-cafc-8326-bafa-42f8ac0a07b0"
           }
         ]
+      },
+      {
+        "type": "desktop",
+        "direction": "left"
+      }
+    ]
+  },
+  {
+    "name": "Programming Uni_",
+    "steps": [
+      {
+        "type": "desktop",
+        "direction": "right"
+      },
+      {
+        "type": "editor",
+        "IDE": "Antigravity",
+        "folder": "E:\\Uni_stuff\\Programming\\Labs_practicals"
+      },
+      {
+        "type": "desktop",
+        "direction": "right"
+      },
+      {
+        "type": "browser",
+        "window": [
+          {
+            "url": "https://chatgpt.com/?temporary-chat=true"
+          }
+        ]
+      },
+      {
+        "type": "desktop",
+        "direction": "left"
+      }
+    ]
+  },
+  {
+    "name": "Portfolio",
+    "steps": [
+      {
+        "type": "desktop",
+        "direction": "right"
+      },
+      {
+        "type": "editor",
+        "IDE": "Antigravity",
+        "folder": "E:\\code_playground\\my_portfolio\\portfolio"
+      },
+      {
+        "type": "desktop",
+        "direction": "right"
+      },
+      {
+        "type": "browser",
+        "window": [
+          {
+            "url": "http://localhost:3000/"
+          },
+          {
+            "url": "https://chatgpt.com/?temporary-chat=true"
+          }
+        ]
+      },
+      {
+        "type": "desktop",
+        "direction": "left"
+      }
+    ]
+  },
+  {
+    "name": "YT Reverse Engineering",
+    "steps": [
+      {
+        "type": "desktop",
+        "direction": "right"
+      },
+      {
+        "type": "editor",
+        "IDE": "Antigravity",
+        "folder": "E:\\code_playground\\rough_work\\yt_reverse_engineering"
+      },
+      {
+        "type": "desktop",
+        "direction": "right"
+      },
+      {
+        "type": "browser",
+        "window": [
+          {
+            "url": "https://www.youtube.com/@CodeWithHarry/videos"
+          },
+          {
+            "url": "https://chatgpt.com/c/693eb5f8-8bf0-8326-930e-c008d49b4d1d"
+          },
+          {
+            "url": "https://chatgpt.com/?temporary-chat=true"
+          },
+          {
+            "url": "https://jsoncrack.com/editor"
+          }
+        ]
+      },
+      {
+        "type": "desktop",
+        "direction": "left"
+      }
+    ]
+  },
+  {
+    "name": "React Native",
+    "steps": [
+      {
+        "type": "desktop",
+        "direction": "right"
+      },
+      {
+        "type": "editor",
+        "IDE": "Antigravity",
+        "folder": "E:\\code_playground\\react_native_daily\\react_native_daily_2"
+      },
+      {
+        "type": "desktop",
+        "direction": "right"
+      },
+      {
+        "type": "browser",
+        "window": [
+          {
+            "url": "https://chatgpt.com/?temporary-chat=true"
+          },
+          {
+            "url": "https://chatgpt.com/c/6944fb32-8eb4-8327-ab4e-3ff52fc7f70f"
+          }
+        ]
+      },
+      {
+        "type": "desktop",
+        "direction": "left"
+      }
+    ]
+  },
+  {
+    "name": "Stack",
+    "steps": [
+      {
+        "type": "desktop",
+        "direction": "Right"
+      },
+      {
+        "type": "editor",
+        "folder": "E:\\code_playground\\PROJECTS\\Stack",
+        "IDE": "Antigravity"
+      },
+      {
+        "type": "desktop",
+        "direction": "Right"
+      },
+      {
+        "type": "browser",
+        "window": [
+          {
+            "url": "https://chatgpt.com/?temporary-chat=true"
+          }
+        ]
+      },
+      {
+        "type": "desktop",
+        "direction": "Left"
+      }
+    ]
+  },
+  {
+    "name": "Jarvis Remote (App)",
+    "steps": [
+      {
+        "type": "browser",
+        "window": [
+          {
+            "url": "https://stitch.withgoogle.com/projects/15677003049255724205"
+          }
+        ]
+      },
+      {
+        "type": "desktop",
+        "direction": "Right"
+      },
+      {
+        "type": "editor",
+        "folder": "E:\\code_playground\\PROJECTS\\jarvis_remote",
+        "IDE": "Antigravity"
+      },
+      {
+        "type": "desktop",
+        "direction": "Right"
+      },
+      {
+        "type": "browser",
+        "window": [
+          {
+            "url": "https://chatgpt.com/?temporary-chat=true"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=jYgG2ARt56k&list=RDjYgG2ARt56k&start_radio=1"
+          }
+        ]
+      },
+      {
+        "type": "desktop",
+        "direction": "Left"
       }
     ]
   }

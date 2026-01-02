@@ -1,0 +1,7 @@
+target = "".join(user_input.lower())
+
+for item in data:
+    item = "".join(item.lower().split())
+    if target == item:
+        setup()
+

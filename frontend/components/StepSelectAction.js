@@ -13,9 +13,9 @@ export default function StepSelectAction({
 }) {
   const [isFocused, setIsFocused] = useState(false);
   const newDesktopCount = steps.filter(
-    (step) => step.type === "new-desktop"
+    (step) => step.type === "desktop"
   ).length;
-  const [isVSCode, setIsVSCode] = useState(false);
+  const [isEditor, setIsEditor] = useState(false);
   const isNewDesktopSelected = newDesktopCount > 0;
 
   useEffect(() => {
@@ -35,11 +35,11 @@ export default function StepSelectAction({
   }, []);
 
   useEffect(() => {
-    const found = steps.some((step) => step.type === "vscode");
+    const found = steps.some((step) => step.type === "editor");
     if (found) {
-      setIsVSCode(true);
+      setIsEditor(true);
     } else {
-      setIsVSCode(false);
+      setIsEditor(false);
     }
   }, [steps]);
 
@@ -58,7 +58,7 @@ export default function StepSelectAction({
             setIsFocused(false);
             localStorage.setItem("env-name", JSON.stringify(envName));
           }}
-          placeholder="Name"
+          placeholder="Project Name"
           className={`neon-input ${isFocused ? "focused" : ""} !pl-6`}
         />
         <button
@@ -66,7 +66,7 @@ export default function StepSelectAction({
           className={`action-button ${isNewDesktopSelected ? "selected" : ""}`}
         >
           <span className="button-icon">🖥️</span>
-          <span>New Desktop</span>
+          <span>Desktop</span>
           {newDesktopCount > 0 && (
             <span className="count-badge">{newDesktopCount}</span>
           )}
@@ -74,10 +74,10 @@ export default function StepSelectAction({
 
         <button
           onClick={() => onSelectAction("vscode")}
-          className={`action-button ${isVSCode === true && "selected"}`}
+          className={`action-button ${isEditor === true && "selected"}`}
         >
           <span className="button-icon">💻</span>
-          <span>VS Code</span>
+          <span>IDE (Editor)</span>
         </button>
 
         <button
@@ -94,8 +94,8 @@ export default function StepSelectAction({
             onClick={() => onSelectAction("cancel")}
             className="action-button cancel-button"
           >
-            <span className="button-icon">✕</span>
-            <span>Cancel</span>
+            <span className="button-icon">&larr;</span>
+            <span>Back</span>
           </button>
         )}
       </div>

@@ -4,6 +4,7 @@ import { useState } from "react";
 export default function Summary({ data, onSubmit, onBack }) {
   const [disabled, setDisabled] = useState(false);
   const steps = data.steps;
+  console.log(steps);
 
   return (
     <div className="step-container summary-container">
@@ -22,17 +23,24 @@ export default function Summary({ data, onSubmit, onBack }) {
           <ol className="steps-list">
             {steps.map((step, index) => (
               <li key={index} className="step-item">
-                {step.type === "new-desktop" && (
+                {step.type === "desktop" && (
                   <div className="step-detail">
-                    <div className="step-type">New Desktop</div>
+                    <div className="step-type">Desktop</div>
+                    <div className="step-meta">
+                      <span className="meta-label">Direction:</span>{" "}
+                      {step.direction}
+                    </div>
                   </div>
                 )}
 
-                {step.type === "vscode" && (
+                {step.type === "editor" && (
                   <div className="step-detail">
-                    <div className="step-type">VS Code</div>
+                    <div className="step-type">Editor</div>
                     <div className="step-meta">
                       <span className="meta-label">Folder:</span> {step.folder}
+                    </div>
+                    <div className="step-meta">
+                      <span className="meta-label">IDE:</span> {step.IDE}
                     </div>
                   </div>
                 )}
