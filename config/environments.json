@@ -33,36 +33,6 @@
     ]
   },
   {
-    "name": "Python - Websockets",
-    "steps": [
-      {
-        "type": "desktop",
-        "direction": "right"
-      },
-      {
-        "type": "editor",
-        "IDE": "Antigravity",
-        "folder": "E:\\code_playground\\python\\websockets"
-      },
-      {
-        "type": "desktop",
-        "direction": "right"
-      },
-      {
-        "type": "browser",
-        "window": [
-          {
-            "url": "chatgpt.com/?temporary-chat=true"
-          }
-        ]
-      },
-      {
-        "type": "desktop",
-        "direction": "left"
-      }
-    ]
-  },
-  {
     "name": "C++",
     "steps": [
       {
@@ -134,7 +104,7 @@
       },
       {
         "type": "editor",
-        "IDE": "Antigravity",
+        "IDE": "VSCode",
         "folder": "E:\\Uni_stuff\\Programming\\Labs_practicals"
       },
       {
@@ -322,6 +292,141 @@
           },
           {
             "url": "https://www.youtube.com/watch?v=jYgG2ARt56k&list=RDjYgG2ARt56k&start_radio=1"
+          }
+        ]
+      },
+      {
+        "type": "desktop",
+        "direction": "Left"
+      }
+    ]
+  },
+  {
+    "name": "Google Meet Lectures",
+    "steps": [
+      {
+        "type": "desktop",
+        "direction": "Right"
+      },
+      {
+        "type": "editor",
+        "folder": "E:\\Uni_stuff\\Programming\\Google Meet Lecutures",
+        "IDE": "Antigravity"
+      },
+      {
+        "type": "desktop",
+        "direction": "Right"
+      },
+      {
+        "type": "browser",
+        "window": [
+          {
+            "url": "https://chatgpt.com/?temporary-chat=true"
+          }
+        ]
+      },
+      {
+        "type": "desktop",
+        "direction": "Right"
+      },
+      {
+        "type": "browser",
+        "window": [
+          {
+            "url": "https://meet.google.com/landing"
+          }
+        ]
+      },
+      {
+        "type": "desktop",
+        "direction": "Left"
+      },
+      {
+        "type": "desktop",
+        "direction": "Left"
+      },
+      {
+        "type": "desktop",
+        "direction": "Left"
+      }
+    ]
+  },
+  {
+    "name": "Real API",
+    "steps": [
+      {
+        "type": "browser",
+        "window": [
+          {
+            "url": "http://localhost:8000/api/v1/health"
+          }
+        ]
+      },
+      {
+        "type": "desktop",
+        "direction": "Right"
+      },
+      {
+        "type": "editor",
+        "folder": "E:\\code_playground\\real-api\\REAL_API_PRAC",
+        "IDE": "VSCode"
+      },
+      {
+        "type": "desktop",
+        "direction": "Right"
+      },
+      {
+        "type": "editor",
+        "folder": "E:\\code_playground\\real-api\\",
+        "IDE": "VSCode"
+      },
+      {
+        "type": "desktop",
+        "direction": "Right"
+      },
+      {
+        "type": "browser",
+        "window": [
+          {
+            "url": "http://localhost:5000/api/v1/health"
+          },
+          {
+            "url": "https://chatgpt.com/?temporary-chat=true"
+          },
+          {
+            "url": "https://chatgpt.com/c/697447ba-5794-8323-8c06-08c8cbc2f269"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Jarvis_v3 UI",
+    "steps": [
+      {
+        "type": "desktop",
+        "direction": "Right"
+      },
+      {
+        "type": "editor",
+        "folder": "/media/stark/Flux Space/code_playground/Jarvis/jarvis_v3",
+        "IDE": "VSCode"
+      },
+      {
+        "type": "desktop",
+        "direction": "Right"
+      },
+      {
+        "type": "browser",
+        "window": [
+          {
+            "url": "http://localhost:3000/"
+          },
+          {
+            "url": "https://chatgpt.com/?temporary-chat=true"
+          },
+          {
+            "url": "https://stitch.withgoogle.com/projects/14667897167803642630"
           }
         ]
       },

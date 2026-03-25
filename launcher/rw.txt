@@ -1,7 +1,19 @@
-target = "".join(user_input.lower())
+Available Environments
+----------------------
+  1. abc
+  2. def
+  3. ghi
+  4. jkl
+  5. mno
+  6. pqr
+  7. xyz
 
-for item in data:
-    item = "".join(item.lower().split())
-    if target == item:
-        setup()
+Default Environment: abc
 
+Select an option:
+  • Enter an environment number (1–7) to start setup
+  • Enter a delete number (1–7) to remove an environment
+  • Enter 'q' to exit
+  • Or wait 60 seconds to automatically start the default environment (abc)
+
+> 
